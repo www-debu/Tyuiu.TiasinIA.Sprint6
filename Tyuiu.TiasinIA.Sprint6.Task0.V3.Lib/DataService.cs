@@ -6,7 +6,7 @@ namespace Tyuiu.TiasinIA.Sprint6.Task0.V3.Lib
         public double Calculate(int x)
         {
 
-            double res = (4 * Math.Pow(x, 3)) / (Math.Pow(x, 3) - 1);
+            double res = Math.Round((4 * Math.Pow(x, 3)) / (Math.Pow(x, 3) - 1), 3);
             return res;
         }
     }
