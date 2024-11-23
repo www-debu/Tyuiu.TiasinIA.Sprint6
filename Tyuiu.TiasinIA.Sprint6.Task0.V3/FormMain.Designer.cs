@@ -101,6 +101,7 @@
             // 
             // buttonHelpClick_tia
             // 
+            buttonHelpClick_tia.FlatStyle = FlatStyle.Flat;
             buttonHelpClick_tia.Location = new Point(735, 438);
             buttonHelpClick_tia.Name = "buttonHelpClick_tia";
             buttonHelpClick_tia.Size = new Size(69, 50);
