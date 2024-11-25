@@ -1,3 +1,4 @@
+using Tyuiu.TiasinIA.Sprint6.Task1.V16.Lib;
 namespace Tyuiu.TiasinIA.Sprint6.Task1.V16
 {
     internal static class Program

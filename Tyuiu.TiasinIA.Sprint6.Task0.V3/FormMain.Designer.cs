@@ -90,6 +90,7 @@
             textBoxResult_tia.ReadOnly = true;
             textBoxResult_tia.Size = new Size(155, 27);
             textBoxResult_tia.TabIndex = 3;
+            textBoxResult_tia.TextChanged += textBoxResult_tia_TextChanged;
             // 
             // textBoxone_tia
             // 

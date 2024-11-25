@@ -54,5 +54,10 @@ namespace Tyuiu.TiasinIA.Sprint6.Task0.V3
         {
             MessageBox.Show("Таск 0 Выполнил студент группы АСОиУБ-24-1 Тясин Илья Александрович");
         }
+
+        private void textBoxResult_tia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
