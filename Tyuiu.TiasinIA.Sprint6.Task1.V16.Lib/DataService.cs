@@ -12,7 +12,7 @@ namespace Tyuiu.TiasinIA.Sprint6.Task1.V16.Lib
             int count = 0;
             for (int x = startValue; x <= stopValue; x++)
             {
-                y = Math.Round((Math.Sin(x) / (x + 1.2)) + Math.Cos(x) * (7*x) - 2 , 3);
+                y = Math.Round((Math.Sin(x) / (x + 1.2)) + Math.Cos(x) * (7*x) - 2 , 2);
                 valueArray[count] = y;
                 count++;
             }
