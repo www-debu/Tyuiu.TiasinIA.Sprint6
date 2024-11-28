@@ -62,5 +62,10 @@ namespace Tyuiu.TiasinIA.Sprint6.Task1.V16
         {
 
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
