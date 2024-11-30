@@ -5,28 +5,28 @@ namespace Tyuiu.TiasinIA.Sprint6.Task3.V15.Lib
     {
         public int[,] Calculate(int[,] matrix)
         {
-            int rows = matrix.GetUpperBound(0) + 1;
-            int colums = matrix.Length / rows;
+            int rows = matrix.GetLength(0);
+            int columns = matrix.GetLength(1);
 
+            // Массив для временного хранения значений третьего столбца.
             int[] tColumn = new int[rows];
             for (int i = 0; i < rows; i++)
             {
-                tColumn[i] = matrix[i, 2];
+                tColumn[i] = matrix[i, 2]; // Используем третий столбец (индекс 2).
             }
 
+            // Сортируем значения третьего столбца и сохраняем индексы.
+            int[] sortedIndexes = Enumerable.Range(0, rows).ToArray();
+            Array.Sort(tColumn, sortedIndexes);
 
-            Array.Sort(tColumn);
-
-
-            int[,] sortedArray = new int[rows, colums];
+            // Создаем новый массив для отсортированных данных.
+            int[,] sortedArray = new int[rows, columns];
             for (int i = 0; i < rows; i++)
             {
-                sortedArray[i, 2] = tColumn[i];
-                for (int j = 0; j < colums; j++)
+                int originalRowIndex = sortedIndexes[i]; // Индекс оригинальной строки.
+                for (int j = 0; j < columns; j++)
                 {
-                        int originalRowIndex = Array.IndexOf(tColumn, sortedArray[i, 2]);
-                        sortedArray[i, j] = matrix[originalRowIndex, j];
-                        
+                    sortedArray[i, j] = matrix[originalRowIndex, j]; // Копируем значения из оригинальной матрицы.
                 }
             }
 
