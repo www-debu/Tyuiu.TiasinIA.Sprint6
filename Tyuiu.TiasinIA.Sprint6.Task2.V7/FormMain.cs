@@ -16,7 +16,7 @@ namespace Tyuiu.TiasinIA.Sprint6.Task2.V7
 
         private void buttonHelpClick_tia_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Таск 0 Выполнил студент группы АСОиУБ-24-1 Тясин Илья Александрович");
+            MessageBox.Show("Таск 2 Выполнил студент группы АСОиУБ-24-1 Тясин Илья Александрович");
         }
 
         private void buttonStrt_tia_Click(object sender, EventArgs e)
