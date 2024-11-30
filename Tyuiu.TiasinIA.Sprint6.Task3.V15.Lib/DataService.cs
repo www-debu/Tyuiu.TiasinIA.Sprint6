@@ -5,13 +5,13 @@ namespace Tyuiu.TiasinIA.Sprint6.Task3.V15.Lib
     {
         public int[,] Calculate(int[,] matrix)
         {
-            int rows = matrix.GetUpperBound(2) + 1;
+            int rows = matrix.GetUpperBound(0) + 1;
             int cols = matrix.Length / rows;
 
             int[] tColumn = new int[rows];
             for (int i = 0; i < rows; i++)
             {
-                tColumn[i] = matrix[i, 0];
+                tColumn[i] = matrix[i, 2];
             }
 
 
