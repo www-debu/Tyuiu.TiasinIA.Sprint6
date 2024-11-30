@@ -25,7 +25,7 @@ namespace Tyuiu.TiasinIA.Sprint6.Task3.V15.Lib
                 for (int j = 1; j < colums; j++)
                 {
 
-                    int originalRowIndex = Array.IndexOf(tColumn, sortedArray[i, 2]);
+                    int originalRowIndex = Array.IndexOf(tColumn, sortedArray[i,0]);
                     sortedArray[i, j] = matrix[originalRowIndex, j];
                 }
             }
