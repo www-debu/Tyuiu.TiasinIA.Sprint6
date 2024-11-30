@@ -22,7 +22,7 @@ namespace Tyuiu.TiasinIA.Sprint6.Task3.V15.Lib
             for (int i = 0; i < rows; i++)
             {
                 sortedArray[i, 0] = tColumn[i];
-                for (int j = 1; j < cols; j++)
+                for (int j = 3; j < cols; j++)
                 {
 
                     int originalRowIndex = Array.IndexOf(tColumn, sortedArray[i, 0]);
