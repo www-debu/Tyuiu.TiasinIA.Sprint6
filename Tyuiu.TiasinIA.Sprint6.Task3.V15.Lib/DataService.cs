@@ -11,7 +11,7 @@ namespace Tyuiu.TiasinIA.Sprint6.Task3.V15.Lib
             int[] tColumn = new int[rows];
             for (int i = 0; i < rows; i++)
             {
-                tColumn[i] = matrix[i, 2];
+                tColumn[i] = matrix[i, 0];
             }
 
 
