@@ -29,14 +29,16 @@ namespace Tyuiu.TiasinIA.Sprint6.Task4.V24
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             groupBoxviv_tia = new GroupBox();
             chart_tia = new System.Windows.Forms.DataVisualization.Charting.Chart();
             textBoxResult_tia = new TextBox();
             buttonHelpClick_tia = new Button();
             groupBoxTask = new GroupBox();
+            button_Save_tia = new Button();
             pictureBox1_tia = new PictureBox();
             buttonStrt_tia = new Button();
             groupBox1 = new GroupBox();
@@ -55,9 +57,10 @@ namespace Tyuiu.TiasinIA.Sprint6.Task4.V24
             // 
             groupBoxviv_tia.Controls.Add(chart_tia);
             groupBoxviv_tia.Controls.Add(textBoxResult_tia);
-            groupBoxviv_tia.Location = new Point(25, 308);
+            groupBoxviv_tia.Dock = DockStyle.Bottom;
+            groupBoxviv_tia.Location = new Point(0, 343);
             groupBoxviv_tia.Name = "groupBoxviv_tia";
-            groupBoxviv_tia.Size = new Size(1454, 610);
+            groupBoxviv_tia.Size = new Size(1517, 610);
             groupBoxviv_tia.TabIndex = 33;
             groupBoxviv_tia.TabStop = false;
             groupBoxviv_tia.Text = "Результат";
@@ -65,18 +68,21 @@ namespace Tyuiu.TiasinIA.Sprint6.Task4.V24
             // chart_tia
             // 
             chart_tia.BorderlineColor = Color.DimGray;
-            chartArea3.Name = "ChartArea1";
-            chart_tia.ChartAreas.Add(chartArea3);
+            chartArea1.Name = "ChartArea1";
+            chart_tia.ChartAreas.Add(chartArea1);
             chart_tia.Location = new Point(452, 26);
             chart_tia.Name = "chart_tia";
             chart_tia.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Name = "Series1";
-            chart_tia.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Name = "Series1";
+            chart_tia.Series.Add(series1);
             chart_tia.Size = new Size(936, 555);
             chart_tia.TabIndex = 2;
             chart_tia.Text = "chart1";
+            title1.Name = "Title1";
+            title1.Text = "График функции Sin(x)";
+            chart_tia.Titles.Add(title1);
             // 
             // textBoxResult_tia
             // 
@@ -91,7 +97,7 @@ namespace Tyuiu.TiasinIA.Sprint6.Task4.V24
             // 
             buttonHelpClick_tia.BackColor = SystemColors.ControlDark;
             buttonHelpClick_tia.FlatStyle = FlatStyle.Flat;
-            buttonHelpClick_tia.Location = new Point(1241, 12);
+            buttonHelpClick_tia.Location = new Point(1205, 26);
             buttonHelpClick_tia.Name = "buttonHelpClick_tia";
             buttonHelpClick_tia.Size = new Size(87, 78);
             buttonHelpClick_tia.TabIndex = 32;
@@ -101,13 +107,29 @@ namespace Tyuiu.TiasinIA.Sprint6.Task4.V24
             // 
             // groupBoxTask
             // 
+            groupBoxTask.Controls.Add(button_Save_tia);
             groupBoxTask.Controls.Add(pictureBox1_tia);
-            groupBoxTask.Location = new Point(25, 12);
+            groupBoxTask.Controls.Add(buttonHelpClick_tia);
+            groupBoxTask.Controls.Add(buttonStrt_tia);
+            groupBoxTask.Dock = DockStyle.Top;
+            groupBoxTask.Location = new Point(0, 0);
             groupBoxTask.Name = "groupBoxTask";
-            groupBoxTask.Size = new Size(673, 290);
+            groupBoxTask.Size = new Size(1517, 301);
             groupBoxTask.TabIndex = 31;
             groupBoxTask.TabStop = false;
             groupBoxTask.Text = "Условия";
+            // 
+            // button_Save_tia
+            // 
+            button_Save_tia.BackColor = SystemColors.ControlDark;
+            button_Save_tia.FlatStyle = FlatStyle.Flat;
+            button_Save_tia.Location = new Point(1205, 135);
+            button_Save_tia.Name = "button_Save_tia";
+            button_Save_tia.Size = new Size(256, 78);
+            button_Save_tia.TabIndex = 35;
+            button_Save_tia.Text = "Сохранить";
+            button_Save_tia.UseVisualStyleBackColor = false;
+            button_Save_tia.Click += button_Save_tia_Click;
             // 
             // pictureBox1_tia
             // 
@@ -121,7 +143,7 @@ namespace Tyuiu.TiasinIA.Sprint6.Task4.V24
             // buttonStrt_tia
             // 
             buttonStrt_tia.BackColor = SystemColors.MenuHighlight;
-            buttonStrt_tia.Location = new Point(1345, 12);
+            buttonStrt_tia.Location = new Point(1309, 26);
             buttonStrt_tia.Name = "buttonStrt_tia";
             buttonStrt_tia.Size = new Size(152, 78);
             buttonStrt_tia.TabIndex = 30;
@@ -178,14 +200,15 @@ namespace Tyuiu.TiasinIA.Sprint6.Task4.V24
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1509, 948);
+            ClientSize = new Size(1517, 953);
             Controls.Add(groupBox1);
             Controls.Add(groupBoxviv_tia);
-            Controls.Add(buttonHelpClick_tia);
             Controls.Add(groupBoxTask);
-            Controls.Add(buttonStrt_tia);
+            MinimumSize = new Size(1500, 1000);
             Name = "FormMain";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Спринт6|Таск4|Вариант24|Тясин И.А.";
+            Load += FormMain_Load;
             groupBoxviv_tia.ResumeLayout(false);
             groupBoxviv_tia.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)chart_tia).EndInit();
@@ -210,5 +233,6 @@ namespace Tyuiu.TiasinIA.Sprint6.Task4.V24
         private TextBox textBoxtwo_tia;
         private TextBox textBoxkon_tia;
         private TextBox textBoxone_tia;
+        private Button button_Save_tia;
     }
 }
