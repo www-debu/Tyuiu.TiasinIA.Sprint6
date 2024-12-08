@@ -28,7 +28,7 @@ namespace Tyuiu.TiasinIA.Sprint6.Task5.V23.Lib
                     index++;
                 }
             }
-            numsArray = numsArray.Where(val => val > 0).ToArray();
+            numsArray = numsArray.Where(val => val < 0).ToArray();
 
             return numsArray;
                     
