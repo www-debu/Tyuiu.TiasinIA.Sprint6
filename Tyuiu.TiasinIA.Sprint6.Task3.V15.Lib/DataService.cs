@@ -12,7 +12,7 @@ namespace Tyuiu.TiasinIA.Sprint6.Task3.V15.Lib
             int[] firstColumn = new int[rows];
             for (int i = 0; i <= rows; i++)
             {
-                firstColumn[i] = matrix[2, i];
+                firstColumn[i] = matrix[i, 2];
             }
 
             Array.Sort(firstColumn);
