@@ -10,15 +10,14 @@ namespace Tyuiu.TiasinIA.Sprint6.Task3.V15.Lib
 
 
             int[] firstColumn = new int[cols];
-            for (int i = 0; i < cols; i++)
+            for (int i = 0; i <= cols; i++)
             {
                 firstColumn[i] = matrix[2, i];
             }
 
-
             Array.Sort(firstColumn);
 
-
+            
             for (int i = 0; i <= firstColumn.Length; i++)
             {
                 matrix[2,i] = firstColumn[i];
