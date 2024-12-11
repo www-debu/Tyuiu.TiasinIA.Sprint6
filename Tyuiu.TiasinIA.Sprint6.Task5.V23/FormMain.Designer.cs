@@ -34,21 +34,22 @@
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             groupBoxTask = new GroupBox();
             textBox1 = new TextBox();
-            button_Save_tia = new Button();
+            button_File_tia = new Button();
             pictureBox1_tia = new PictureBox();
             buttonHelpClick_tia = new Button();
             buttonStrt_tia = new Button();
-            textBoxResult_tia = new TextBox();
             chart_tia = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            dataGridView_tia = new DataGridView();
             groupBoxTask.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1_tia).BeginInit();
             ((System.ComponentModel.ISupportInitialize)chart_tia).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_tia).BeginInit();
             SuspendLayout();
             // 
             // groupBoxTask
             // 
             groupBoxTask.Controls.Add(textBox1);
-            groupBoxTask.Controls.Add(button_Save_tia);
+            groupBoxTask.Controls.Add(button_File_tia);
             groupBoxTask.Controls.Add(pictureBox1_tia);
             groupBoxTask.Controls.Add(buttonHelpClick_tia);
             groupBoxTask.Controls.Add(buttonStrt_tia);
@@ -69,16 +70,17 @@
             textBox1.TabIndex = 36;
             textBox1.Text = "Вывод данных";
             // 
-            // button_Save_tia
+            // button_File_tia
             // 
-            button_Save_tia.BackColor = SystemColors.ControlDark;
-            button_Save_tia.FlatStyle = FlatStyle.Flat;
-            button_Save_tia.Location = new Point(1040, 199);
-            button_Save_tia.Name = "button_Save_tia";
-            button_Save_tia.Size = new Size(147, 78);
-            button_Save_tia.TabIndex = 35;
-            button_Save_tia.Text = "Сохранить";
-            button_Save_tia.UseVisualStyleBackColor = false;
+            button_File_tia.BackColor = SystemColors.ControlDark;
+            button_File_tia.FlatStyle = FlatStyle.Flat;
+            button_File_tia.Location = new Point(1040, 199);
+            button_File_tia.Name = "button_File_tia";
+            button_File_tia.Size = new Size(147, 78);
+            button_File_tia.TabIndex = 35;
+            button_File_tia.Text = "Открыть файл";
+            button_File_tia.UseVisualStyleBackColor = false;
+            button_File_tia.Click += button_File_tia_Click;
             // 
             // pictureBox1_tia
             // 
@@ -112,15 +114,6 @@
             buttonStrt_tia.UseVisualStyleBackColor = false;
             buttonStrt_tia.Click += buttonStrt_tia_Click;
             // 
-            // textBoxResult_tia
-            // 
-            textBoxResult_tia.Location = new Point(22, 299);
-            textBoxResult_tia.Multiline = true;
-            textBoxResult_tia.Name = "textBoxResult_tia";
-            textBoxResult_tia.ReadOnly = true;
-            textBoxResult_tia.Size = new Size(224, 619);
-            textBoxResult_tia.TabIndex = 36;
-            // 
             // chart_tia
             // 
             chartArea2.Name = "ChartArea1";
@@ -137,13 +130,22 @@
             chart_tia.TabIndex = 37;
             chart_tia.Text = "chart1";
             // 
+            // dataGridView_tia
+            // 
+            dataGridView_tia.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_tia.Location = new Point(12, 299);
+            dataGridView_tia.Name = "dataGridView_tia";
+            dataGridView_tia.RowHeadersWidth = 51;
+            dataGridView_tia.Size = new Size(237, 619);
+            dataGridView_tia.TabIndex = 38;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1519, 930);
+            Controls.Add(dataGridView_tia);
             Controls.Add(chart_tia);
-            Controls.Add(textBoxResult_tia);
             Controls.Add(groupBoxTask);
             Name = "FormMain";
             Text = "Спринт6|Таск5|Вариант23|Тясин И.А.";
@@ -151,19 +153,19 @@
             groupBoxTask.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1_tia).EndInit();
             ((System.ComponentModel.ISupportInitialize)chart_tia).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_tia).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private GroupBox groupBoxTask;
-        private Button button_Save_tia;
+        private Button button_File_tia;
         private PictureBox pictureBox1_tia;
         private Button buttonHelpClick_tia;
         private Button buttonStrt_tia;
-        private TextBox textBoxResult_tia;
         private TextBox textBox1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_tia;
+        private DataGridView dataGridView_tia;
     }
 }

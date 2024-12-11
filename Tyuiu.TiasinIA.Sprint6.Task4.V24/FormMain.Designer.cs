@@ -35,7 +35,6 @@ namespace Tyuiu.TiasinIA.Sprint6.Task4.V24
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             groupBoxviv_tia = new GroupBox();
             chart_tia = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            textBoxResult_tia = new TextBox();
             buttonHelpClick_tia = new Button();
             groupBoxTask = new GroupBox();
             button_Save_tia = new Button();
@@ -46,6 +45,7 @@ namespace Tyuiu.TiasinIA.Sprint6.Task4.V24
             textBoxtwo_tia = new TextBox();
             textBoxkon_tia = new TextBox();
             textBoxone_tia = new TextBox();
+            textBoxResult_tia = new TextBox();
             groupBoxviv_tia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chart_tia).BeginInit();
             groupBoxTask.SuspendLayout();
@@ -60,7 +60,7 @@ namespace Tyuiu.TiasinIA.Sprint6.Task4.V24
             groupBoxviv_tia.Dock = DockStyle.Bottom;
             groupBoxviv_tia.Location = new Point(0, 343);
             groupBoxviv_tia.Name = "groupBoxviv_tia";
-            groupBoxviv_tia.Size = new Size(1517, 610);
+            groupBoxviv_tia.Size = new Size(1482, 610);
             groupBoxviv_tia.TabIndex = 33;
             groupBoxviv_tia.TabStop = false;
             groupBoxviv_tia.Text = "Результат";
@@ -84,15 +84,6 @@ namespace Tyuiu.TiasinIA.Sprint6.Task4.V24
             title1.Text = "График функции Sin(x)";
             chart_tia.Titles.Add(title1);
             // 
-            // textBoxResult_tia
-            // 
-            textBoxResult_tia.Location = new Point(26, 43);
-            textBoxResult_tia.Multiline = true;
-            textBoxResult_tia.Name = "textBoxResult_tia";
-            textBoxResult_tia.ReadOnly = true;
-            textBoxResult_tia.Size = new Size(256, 538);
-            textBoxResult_tia.TabIndex = 1;
-            // 
             // buttonHelpClick_tia
             // 
             buttonHelpClick_tia.BackColor = SystemColors.ControlDark;
@@ -114,7 +105,7 @@ namespace Tyuiu.TiasinIA.Sprint6.Task4.V24
             groupBoxTask.Dock = DockStyle.Top;
             groupBoxTask.Location = new Point(0, 0);
             groupBoxTask.Name = "groupBoxTask";
-            groupBoxTask.Size = new Size(1517, 301);
+            groupBoxTask.Size = new Size(1482, 301);
             groupBoxTask.TabIndex = 31;
             groupBoxTask.TabStop = false;
             groupBoxTask.Text = "Условия";
@@ -196,11 +187,20 @@ namespace Tyuiu.TiasinIA.Sprint6.Task4.V24
             textBoxone_tia.Size = new Size(147, 27);
             textBoxone_tia.TabIndex = 13;
             // 
+            // textBoxResult_tia
+            // 
+            textBoxResult_tia.Location = new Point(26, 43);
+            textBoxResult_tia.Multiline = true;
+            textBoxResult_tia.Name = "textBoxResult_tia";
+            textBoxResult_tia.ReadOnly = true;
+            textBoxResult_tia.Size = new Size(256, 538);
+            textBoxResult_tia.TabIndex = 1;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1517, 953);
+            ClientSize = new Size(1482, 953);
             Controls.Add(groupBox1);
             Controls.Add(groupBoxviv_tia);
             Controls.Add(groupBoxTask);
@@ -222,7 +222,6 @@ namespace Tyuiu.TiasinIA.Sprint6.Task4.V24
         #endregion
 
         private GroupBox groupBoxviv_tia;
-        private TextBox textBoxResult_tia;
         private Button buttonHelpClick_tia;
         private GroupBox groupBoxTask;
         private PictureBox pictureBox1_tia;
@@ -234,5 +233,6 @@ namespace Tyuiu.TiasinIA.Sprint6.Task4.V24
         private TextBox textBoxkon_tia;
         private TextBox textBoxone_tia;
         private Button button_Save_tia;
+        private TextBox textBoxResult_tia;
     }
 }

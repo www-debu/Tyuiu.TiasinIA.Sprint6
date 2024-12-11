@@ -6,31 +6,25 @@ namespace Tyuiu.TiasinIA.Sprint6.Task3.V15.Lib
         public int[,] Calculate(int[,] matrix)
         {
             int rows = matrix.GetUpperBound(0) + 1;
-            int colums = matrix.Length / rows;
+            int cols = matrix.Length / rows;
 
-            int[] tColumn = new int[rows];
-            for (int i = 0; i < rows; i++)
+
+            int[] firstColumn = new int[cols];
+            for (int i = 0; i < cols; i++)
             {
-                tColumn[i] = matrix[i, 2];
+                firstColumn[i] = matrix[2, i];
             }
 
 
-            Array.Sort(tColumn);
+            Array.Sort(firstColumn);
 
 
-            int[,] sortedArray = new int[rows, colums];
-            for (int i = 0; i < rows; i++)
+            for (int i = 0; i <= firstColumn.Length; i++)
             {
-                sortedArray[i, 2] = tColumn[i];
-                for (int j = 1; j < colums; j++)
-                {
-                        int originalRowIndex = Array.IndexOf(tColumn, sortedArray[i, 2]);
-                        sortedArray[i, j] = matrix[originalRowIndex, j];
-                        
-                }
+                matrix[2,i] = firstColumn[i];
             }
 
-            return sortedArray;
+            return matrix;
         }
     }
 }
