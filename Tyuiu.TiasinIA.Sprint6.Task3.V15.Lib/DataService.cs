@@ -5,22 +5,31 @@ namespace Tyuiu.TiasinIA.Sprint6.Task3.V15.Lib
     {
         public int[,] Calculate(int[,] matrix)
         {
-            int rows = matrix.GetUpperBound(0) + 1;
-            int cols = matrix.Length / rows;
+            
+            int rows = matrix.GetLength(0);
+            int cols = matrix.GetLength(1);
 
 
-            int[] firstColumn = new int[rows];
-            for (int i = 0; i <= rows; i++)
+            int[,] tempArray = new int[rows, cols];
+
+            for (int i = 0; i < rows; i++)
             {
-                firstColumn[i] = matrix[i, 2];
+                for (int j = 0; j < cols; j++)
+                {
+                    tempArray[i, j] = matrix[i, j];
+                }
             }
 
-            Array.Sort(firstColumn);
 
-            
-            for (int i = 0; i <= firstColumn.Length; i++)
+            Array.Sort(tempArray, (a, b) => a[2].CompareTo(b[2]));
+
+
+            for (int i = 0; i < rows; i++)
             {
-                matrix[2,i] = firstColumn[i];
+                for (int j = 0; j < cols; j++)
+                {
+                    matrix[i, j] = tempArray[i, j];
+                }
             }
 
             return matrix;
