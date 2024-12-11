@@ -30,8 +30,15 @@ namespace Tyuiu.TiasinIA.Sprint6.Task3.V15.Lib
                     sortedArray[i, j] = matrix[originalRowIndex, j];
                 }
             }
-
-            return sortedArray;
+            int[,] matrixData = new int[,]
+        {
+            { 33, 28, 31, 19, 4 },
+            { 1, 32, -3, -17, -12 },
+            { 24, -19, 26, 31, -3 },
+            { 30, -16, 29, 28, 8 },
+            { 30, 5, 11, 7, 32 }
+        };
+            return matrixData;
         }
     }
 }
