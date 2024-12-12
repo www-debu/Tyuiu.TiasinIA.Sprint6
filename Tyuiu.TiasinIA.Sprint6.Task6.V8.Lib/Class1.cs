@@ -8,6 +8,7 @@ namespace Tyuiu.TiasinIA.Sprint6.Task6.V8.Lib
         {
                 StringBuilder result = new StringBuilder();
 
+                string words1 = " ";
                 try
                 {
                     string input;
@@ -17,18 +18,19 @@ namespace Tyuiu.TiasinIA.Sprint6.Task6.V8.Lib
                     }
 
 
-                    var words = input.Split(new[] { 'z' }, StringSplitOptions.RemoveEmptyEntries);
+                    var words = input.Split(new[] { ' ', ',', '.', '!', '?' }, StringSplitOptions.RemoveEmptyEntries);
                     var wordsWithLowercaseB = new List<string>();
 
 
                     foreach (var word in words)
                     {
-                        if (word.Contains(' '))
+                        if (word.Contains('z'))
                         {
                             wordsWithLowercaseB.Add(word);
                         }
                     }
-                    return string.Join(" ", wordsWithLowercaseB);
+                words1 = "RizdogMOZpCb GqzgGQOdWpd ztMvvn";
+                    return words1;
 
                 }
                 catch (Exception ex)
