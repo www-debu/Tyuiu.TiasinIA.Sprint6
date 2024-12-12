@@ -6,43 +6,40 @@ namespace Tyuiu.TiasinIA.Sprint6.Task7.V23.Lib
     {
         public int[,] GetMatrix(string path)
         {
-            var lines = File.ReadAllLines(path);
-            DataTable dataTable = new DataTable();
+            // LoadFromFileData, так как из аргументов только путь :D
+            string fileData = File.ReadAllText(path);
 
-            // Создает столбцы для DataTable
-            foreach (var header in lines[0].Split(','))
+            fileData = fileData.Replace("\n", "\r");
+            string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
+
+            int rows = lines.Length;
+            int columns = lines[0].Split(';').Length;
+
+            int[,] arrayValues = new int[rows, columns];
+
+            for (int r = 0; r < rows; r++)
             {
-                dataTable.Columns.Add(header);
-            }
-
-            // Заполняет DataTable данными
-            for (int i = 1; i < lines.Length; i++)
-            {
-                var row = lines[i].Split(',');
-                dataTable.Rows.Add(row);
-            }
-
-            return dataTable;
-        }
-
-        public DataTable ProcessMatrix(DataTable inputTable)
-        {
-            DataTable outputTable = inputTable.Copy();
-            int lastColumnIndex = outputTable.Columns.Count - 1;
-
-            // Изменяет значения в последнем столбце
-            foreach (DataRow row in outputTable.Rows)
-            {
-                if (int.TryParse(row[lastColumnIndex].ToString(), out int value))
+                string[] line_r = lines[r].Split(';');
+                for (int c = 0; c < columns; c++)
                 {
-                    if (value < 2)
-                    {
-                        row[lastColumnIndex] = 2;
-                    }
+                    arrayValues[r, c] = Convert.ToInt32(line_r[c]);
                 }
             }
 
-            return outputTable;
+            rows = arrayValues.GetUpperBound(0) + 1;
+            columns = arrayValues.Length / rows;
+
+            int xRow = 4;
+
+            for (int r = 0; r < rows; r++)
+            {
+                for (int c = 0; c < columns; c++)
+                {
+                    if (arrayValues[xRow, c] % 2 != 0) arrayValues[xRow, c] = -1;
+                }
+            }
+
+            return arrayValues;
         }
     }
 }
