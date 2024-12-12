@@ -17,13 +17,13 @@ namespace Tyuiu.TiasinIA.Sprint6.Task6.V8.Lib
                     }
 
 
-                    var words = input.Split(new[] { ' ', ',', '.', '!', '?' }, StringSplitOptions.RemoveEmptyEntries);
+                    var words = input.Split(new[] { 'z' }, StringSplitOptions.RemoveEmptyEntries);
                     var wordsWithLowercaseB = new List<string>();
 
 
                     foreach (var word in words)
                     {
-                        if (word.Contains('z'))
+                        if (word.Contains(' '))
                         {
                             wordsWithLowercaseB.Add(word);
                         }
